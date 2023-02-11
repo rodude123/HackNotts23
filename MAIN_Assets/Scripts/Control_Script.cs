@@ -12,6 +12,7 @@ public class Control_Script : MonoBehaviour
     [SerializeField] private Transform camera;
 
 
+
     // On start, an OSC message address is defined as well as the required function.
     void Start()
     {
@@ -32,8 +33,7 @@ public class Control_Script : MonoBehaviour
         float gyroX = message.GetFloat(1);
         float swingGyro = -message.GetFloat(2) * multi;
 
-
-        racket.rotation = Quaternion.Euler(-pitchGyro, swingGyro, 0);
-        racket.position = new Vector3(swingGyro / 100, camera.position.y, camera.position.z + 2);
+        racket.rotation = Quaternion.Euler(pitchGyro, swingGyro, 0);
+        racket.position = new Vector3(camera.position.x + swingGyro / 100, camera.position.y - 0.5f, camera.position.z + 2);
     }
 }
