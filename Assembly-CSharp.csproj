@@ -43,30 +43,14 @@
   <ItemGroup>
      <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
      <Folder Include="Assets" />
-     <None Include="Assets/TerrainSampleAssets/ThirdPartyNotices.txt" />
-     <Folder Include="Assets/TerrainSampleAssets/Textures/Terrain" />
      <Folder Include="Assets/Settings" />
      <Folder Include="Assets/Materials" />
-     <Folder Include="Assets/TerrainSampleAssets/ShaderGraphs/CustomFunctions" />
-     <Folder Include="Assets/TerrainSampleAssets/ShaderGraphs" />
-     <Folder Include="Assets/TerrainSampleAssets/Models" />
-     <Folder Include="Assets/TerrainSampleAssets/Textures/Details" />
      <Folder Include="Assets/Models" />
      <Folder Include="Assets/Scenes" />
-     <Folder Include="Assets/TerrainSampleAssets/TerrainBrushes" />
-     <Folder Include="Assets/TerrainSampleAssets/Prefabs" />
-     <Folder Include="Assets/TerrainSampleAssets/Materials" />
-     <Folder Include="Assets/TerrainSampleAssets/Settings" />
      <Folder Include="Assets/TutorialInfo/Scripts" />
      <Folder Include="Assets/TutorialInfo/Icons" />
      <Folder Include="Assets/TutorialInfo" />
-     <Folder Include="Assets/TerrainSampleAssets/Textures" />
      <Folder Include="Assets/Models/materials" />
-     <Folder Include="Assets/TerrainSampleAssets/Textures/Heightmaps" />
-     <Folder Include="Assets/TerrainSampleAssets/TerrainLayers" />
-     <Folder Include="Assets/TerrainSampleAssets/ShaderGraphs/Subgraphs" />
-     <Folder Include="Assets/TerrainSampleAssets" />
-     <None Include="Assets/TerrainSampleAssets/ShaderGraphs/CustomFunctions/CustomLighting.hlsl" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
