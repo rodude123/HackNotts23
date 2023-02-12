@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,9 @@ public class Control_Script : MonoBehaviour
     private float multi = 30;
     [SerializeField] private Transform racket;
     [SerializeField] private Transform camera;
+
+    private float maxYPos = 85f;
+    private float maxYNeg = -85f;
 
 
 
@@ -33,7 +37,12 @@ public class Control_Script : MonoBehaviour
         float gyroX = message.GetFloat(1);
         float swingGyro = -message.GetFloat(2) * multi;
 
-        racket.rotation = Quaternion.Euler(pitchGyro, swingGyro, 0);
-        racket.position = new Vector3(camera.position.x + swingGyro / 100, camera.position.y - 0.5f, camera.position.z + 2);
+        if (swingGyro < maxYPos && swingGyro > maxYNeg) 
+        {
+
+            racket.rotation = Quaternion.Euler(pitchGyro, swingGyro, 0);
+            racket.position = new Vector3(camera.position.x + swingGyro / 150, camera.position.y - 0.5f, camera.position.z + 2);
+
+        }
     }
 }
