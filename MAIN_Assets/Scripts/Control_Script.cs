@@ -30,17 +30,16 @@ public class Control_Script : MonoBehaviour
      The values are multiplied to gain further range of movement. Values are applied to the rotation of the racket for swinging. Swing value is used
         for position for more free hand movement - similar to movement in VR. Y and Z axis of the racket (in terms of position) are clamped to the
         camera's position which prevents OVERLY free movement.*/
-    void gyroHandler(OscMessage message)
-    {
+    void gyroHandler(OscMessage message) { 
 
         float pitchGyro = message.GetFloat(0) * multi;
         float gyroX = message.GetFloat(1);
         float swingGyro = -message.GetFloat(2) * multi;
 
-        if (swingGyro < maxYPos && swingGyro > maxYNeg) 
+        if (swingGyro < maxYPos && swingGyro > maxYNeg)
         {
 
-            racket.rotation = Quaternion.Euler(pitchGyro, swingGyro, 0);
+            racket.rotation = Quaternion.Euler(-pitchGyro + 100, swingGyro, 0);
             racket.position = new Vector3(camera.position.x + swingGyro / 150, camera.position.y - 0.5f, camera.position.z + 2);
 
         }
